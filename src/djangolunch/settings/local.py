@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'polls',
     'restaurants',
     'users',
+    'corsheaders',
     'debug_toolbar',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -62,6 +63,7 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -164,3 +166,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Allow Cross-Origin Requests in Local Mode
+# This allows XHR requests from another origin (domain + port) to the API
+# end points
+
+CORS_ORIGIN_ALLOW_ALL = True
+
