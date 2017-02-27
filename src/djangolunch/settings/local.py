@@ -167,6 +167,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'static/'))
+
+STATICFILES_DIRS = [os.path.abspath(os.path.join(BASE_DIR, 'vuelunch/dist/'))]
+
 
 # Allow Cross-Origin Requests in Local Mode
 # This allows XHR requests from another origin (domain + port) to the API

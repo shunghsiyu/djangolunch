@@ -1,0 +1,3 @@
+[submodule "src/djangolunch/vuelunch"]
+	path = src/vuelunch
+	url = https://github.com/LunchBar/vuelunch
